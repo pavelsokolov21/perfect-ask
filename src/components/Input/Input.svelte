@@ -7,17 +7,19 @@
 
 <style lang="scss">
 	@import '@styles/colors.scss';
+	@import '@styles/common.scss';
 
 	.input {
+		width: 100%;
 		padding: 18px 8px;
-		border: 1px solid $lightGray;
-		border-radius: 10px;
+		border: 1px solid $gray;
+		border-radius: $primaryBorderRadius;
 		box-sizing: border-box;
 		font-size: 24px;
 		font-weight: 500;
 		color: $primary;
 		outline: none;
-		transition: all 0.2s ease;
+		transition: all $primaryTransitionTime $primaryAnimationType;
 
 		&:focus {
 			border-color: $primary;

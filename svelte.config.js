@@ -9,8 +9,10 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			'@styles': './src/styles',
-			'@components': './src/components'
+			'@styles/*': './src/styles/*',
+			'@components/*': './src/components/*',
+			'@constants/*': './src/constants/*',
+			'@interfaces/*': './src/interfaces/*'
 		}
 	}
 };
