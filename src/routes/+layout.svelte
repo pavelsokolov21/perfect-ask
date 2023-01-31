@@ -1,3 +1,7 @@
+<script>
+	import 'normalize.css';
+</script>
+
 <slot />
 
 <style lang="scss">
@@ -5,9 +9,5 @@
 
 	:global(*) {
 		font-family: $primaryFontFamily;
-	}
-
-	:global(body) {
-		margin: 0;
 	}
 </style>

@@ -48,6 +48,7 @@
 	"type": "module",
 	"dependencies": {
 		"@poppanator/sveltekit-svg": "^2.1.1",
-		"classnames": "^2.3.2"
+		"classnames": "^2.3.2",
+		"normalize.css": "^8.0.1"
 	}
 }

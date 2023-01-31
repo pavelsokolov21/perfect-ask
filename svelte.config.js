@@ -13,7 +13,7 @@ const config = {
 			'@components/*': './src/components/*',
 			'@constants/*': './src/constants/*',
 			'@interfaces/*': './src/interfaces/*',
-			'@utils/*': './src/utils'
+			'@utils/*': './src/utils/*'
 		}
 	}
 };
