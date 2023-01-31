@@ -1,12 +1,18 @@
 <script lang="ts">
 	import cn from 'classnames';
 
-	import type { ButtonTypes } from './Button-interfaces';
+	import { createClassWithModifier } from '@utils/createClassWithModifier';
+	import { BASE_CLASS } from './ButtonConstants';
+	import type { ButtonTypes, Colors } from './ButtonInterfaces';
 
 	export let type: ButtonTypes = 'filled';
+	export let color: Colors = 'primary';
+
+	const classTypeBtn = createClassWithModifier(BASE_CLASS, type);
+	const classColorBtn = createClassWithModifier(BASE_CLASS, color);
 </script>
 
-<button class={cn('button', type)}><slot>Отправить</slot></button>
+<button class={cn('button', classTypeBtn, classColorBtn)}><slot>Отправить</slot></button>
 
 <style lang="scss">
 	@import '@styles/colors.scss';
@@ -17,11 +23,11 @@
 		transition: all $primaryTransitionTime $primaryAnimationType;
 		cursor: pointer;
 
-		&.filled,
-		&.bordered {
-			padding: 12px 20px;
+		&_filled,
+		&_bordered {
+			padding: 6px 20px;
 			border: 1px solid $primary;
-			border-radius: $primaryBorderRadius;
+			border-radius: calc($radiusLg * 2);
 			font-weight: 500;
 
 			&:hover {
@@ -29,7 +35,7 @@
 			}
 		}
 
-		&.filled {
+		&_filled {
 			background-color: $primary;
 			color: $white;
 
@@ -39,7 +45,7 @@
 			}
 		}
 
-		&.bordered {
+		&_bordered {
 			background-color: $transparent;
 			color: $primary;
 
@@ -49,13 +55,13 @@
 			}
 		}
 
-		&.text {
-			color: $lightGray;
+		&_text {
+			color: $primary;
 			background-color: $transparent;
 			border: none;
 
 			&:hover {
-				color: $primary;
+				color: $gray;
 			}
 		}
 	}

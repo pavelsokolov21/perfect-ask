@@ -13,7 +13,7 @@
 		width: 100%;
 		padding: 18px 8px;
 		border: 1px solid $gray;
-		border-radius: $primaryBorderRadius;
+		border-radius: $radiusLg;
 		box-sizing: border-box;
 		font-size: 24px;
 		font-weight: 500;

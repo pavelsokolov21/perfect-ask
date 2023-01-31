@@ -12,7 +12,8 @@ const config = {
 			'@styles/*': './src/styles/*',
 			'@components/*': './src/components/*',
 			'@constants/*': './src/constants/*',
-			'@interfaces/*': './src/interfaces/*'
+			'@interfaces/*': './src/interfaces/*',
+			'@utils/*': './src/utils'
 		}
 	}
 };

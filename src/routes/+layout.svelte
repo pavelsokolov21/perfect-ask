@@ -6,4 +6,8 @@
 	:global(*) {
 		font-family: $primaryFontFamily;
 	}
+
+	:global(body) {
+		margin: 0;
+	}
 </style>
