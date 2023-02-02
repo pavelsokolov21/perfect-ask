@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FlexRow from '@components/Atoms/FlexRow/FlexRow.svelte';
+	import FlexContainer from '@components/Atoms/FlexContainer/FlexContainer.svelte';
 	import Button from '@components/Button/Button.svelte';
 	import Container from '@components/Container/Container.svelte';
 	import Icon from '@components/Icons/Icon.svelte';
@@ -7,15 +7,15 @@
 
 <header class="header">
 	<Container>
-		<FlexRow justify="space-between">
+		<FlexContainer justify="space-between">
 			<Icon icon="Logo" />
-			<FlexRow gap="XL">
+			<FlexContainer gap="XL">
 				<Button type="bordered">Создать</Button>
 				<Button type="text">Шаблоны</Button>
 				<Button type="text">Результаты</Button>
-			</FlexRow>
+			</FlexContainer>
 			<Button type="bordered">Войти</Button>
-		</FlexRow>
+		</FlexContainer>
 	</Container>
 </header>
 

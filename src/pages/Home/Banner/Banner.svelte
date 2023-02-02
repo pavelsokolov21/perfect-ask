@@ -1,25 +1,27 @@
 <script>
-	import FlexRow from '@components/Atoms/FlexRow/FlexRow.svelte';
-	import Paragraph from '@components/Atoms/Paragraph/Paragraph.svelte';
+	import FlexContainer from '@components/Atoms/FlexContainer/FlexContainer.svelte';
+	import Typography from '@components/Atoms/Typography/Typography.svelte';
 	import Button from '@components/Button/Button.svelte';
 	import Container from '@components/Container/Container.svelte';
 </script>
 
 <section class="banner">
 	<Container>
-		<FlexRow>
+		<FlexContainer>
 			<div>
-				<Paragraph size="2XL" color="white" weight="bold">Создайте лучший опрос</Paragraph>
-				<Paragraph size="2MD" color="white" className="banner__subtitle">
+				<Typography element="h1" size="2XL" color="white" weight="bold"
+					>Создайте лучший опрос</Typography
+				>
+				<Typography element="h3" size="2MD" color="white" className="banner__subtitle">
 					Можно гадать, но лучше узнать наверняка: но лучше опросить клиентов, коллег или
 					подписчиков при помощи нашего конструктора для сбора и анализа отзывов
-				</Paragraph>
+				</Typography>
 				<Button type="bordered" color="white" size="2MD" className="banner__create-btn">
 					Создать
 				</Button>
 			</div>
 			<img class="banner__image" src="/womenSlides.svg" alt="Women slides banner" />
-		</FlexRow>
+		</FlexContainer>
 	</Container>
 </section>
 
@@ -43,7 +45,7 @@
 		&__image {
 			position: relative;
 			left: -60px;
-			top: 30px;
+			top: $imageBottomShift;
 		}
 	}
 </style>
